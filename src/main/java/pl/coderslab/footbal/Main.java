@@ -14,8 +14,10 @@ public class Main {
 
     public static void main(String[] args) {
         RestTemplate restTemplate = new RestTemplate();
+
         CountryDTO[] forObject = restTemplate.getForObject(API_URL,
                 CountryDTO[].class, API_KEY);
         Arrays.stream(forObject).forEach(System.out::println);
+
     }
 }
