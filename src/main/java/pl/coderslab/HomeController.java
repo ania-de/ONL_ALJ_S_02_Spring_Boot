@@ -38,7 +38,7 @@ public class HomeController {
     public Cartoon find(@PathVariable Long id){
         return cartoonRepository.findById(id)
                 .orElseThrow(() ->
-                        new ResourceNotFoundException(String.format("cartoon %d not found", id)));
+                        new ResourceNotFoundException("bald", "CODE"));
     }
 
     @GetMapping("/cartoon-err/{id}")
